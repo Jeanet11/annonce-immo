@@ -134,12 +134,23 @@ $(function() {
   });
 
   //Ouverture du formulaire Nouvelle Annonce
-  $("#add-annonce").click( function() {
+  $("#add-annonce").click(function() {
     console.log("Reset");
     $("#id-form")[0].reset();
   });
 
   //console.log ( createTableAnnonceHtml( annonces ));
+  var count = 0;
+  $('.afficher').click(function(){
 
-
+  	$('#display-annonces').toggle();
+  	count++;
+  	if (count%2 !== 0) {
+  		$('.afficher').html("Masquer les annonces");
+    	}
+    else {
+    	$('.afficher').html("Afficher les annonces");
+    }
+  
+  })
 })
